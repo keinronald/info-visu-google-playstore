@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://www.keinberger.at/ronald/images/portfolio/RK-LOGO.gif">
+        <title>Guide for the playstore!</title>
+        <meta name="description" content="This wonderful site...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="referrer" content="same-origin">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Color the status bar on mobile devices -->
+        <meta name="theme-color" content="#2F3BA2">
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    </head>
+
+    <body>
+        <header>
+            <div class="info">
+                <b>Note!</b> This page isn't optimized for low resolutions. <div class="close"><b>x</b></div>
+            </div>
+            <div class="header__text">
+                <h1><b class="text-white">Google Play Store</b> Breakdown</h1>
+                <p>At this page, we are aiming to understand the trend of current Google Playstore market.</p>
+            </div>
+            <a href="#sec2" class="arrow bounce"></a>
+        </header>
+
+
+        <div id="sec2" class="container">
+            <section class="side">
+                <select id="bar-chart-data" class="bc-data">
+                    <option value="apps">Number of Apps</option>
+                    <option value="installs">Number of Installs</option>
+                </select>
+                <figure>
+                    <h2>Categories Breakdown</h2>
+                    <div class="bar-chart-container chart" style="max-width: 1000px;"></div>
+                </figure>
+                <article>
+                    <h3>Which categories are popular/crowded?</h3>
+                    <p>As we can see in the visualisation <b>Family</b> is by far (873 Apps) the category with the most apps (most crowded) on the Google Play Store.
+                        But if we switch the y-axis to "Number of Installs" we can see that <b>Game</b> is the most popular Category followed by <b>Communication</b>.
+                        So they have less competition but more installs.</p>
+                </article>
+            </section>
+            <a href="#sec3" class="arrow bounce"></a>
+        </div>
+
+
+        <div id="sec3" class="container">
+            <section class="side">
+                <figure>
+                    <h2>Reviews and Ratings</h2>
+                    <!-- here's the div our chart will be injected into -->
+                    <div class="scatter-plot-container chart" style="max-width: 1000px;"></div>
+
+                    <!-- these update our chart -->
+                    <button class="type" data-type="all">All Apps</button>
+                    <button class="type" data-type="free">Free Apps</button>
+                    <button class="type" data-type="paid">Paid Apps</button>
+                </figure>
+                <article>
+                    <h3>Reviews and their Impact</h3>
+                    <p> It also is clear that the amount of reviews has a positive impact on the rating.
+                        We can also see that the three apps with the most reviews are all <b>social media Apps</b>
+                        and the most rated App in the Paid section is <b>Minecraft</b>.
+                        When we observe the different datatypes (all/free/paid Apps) we can clearly see that there isn't a lot of difference between
+                        all Apps and free Apps, so we can think that most apps are free. Let's check this theory in the next visualization.</p>
+                    <em style="font-style: italic;">Note: Difference between all and free Apps is minimal.</em>
+                </article>
+            </section>
+            <a href="#sec4" class="arrow bounce"></a>
+        </div>
+
+
+        <div id="sec4" class="container">
+
+            <section class="side">
+                <figure>
+                    <h2>Paid VS Free <em style="font-size: 0.5em">(TOP 5 Categories)</em></h2>
+                    <!-- here's the div our chart will be injected into -->
+                    <div class="sunburst-chart-container chart" style="max-width: 1000px;"></div>
+                </figure>
+                <article>
+                    <h3>Are really most Apps free?</h3>
+                    <p>Yes - When we observe the pair to free Apps ration in the top 5 Categories we can clearly see that our theory is right
+                        and most of the Apps in the Google Play Store are <b>Free</b>.
+                        Most categories only have a maximum of about 10% Paid Apps.</p>
+                    <em style="font-style: italic;">Note: Visualization is in Numbers of Apps.</em>
+                </article>
+            </section>
+            <a href="#sec5" class="arrow bounce"></a>
+        </div>
+
+        <div id="sec5" class="container">
+            <section class="side">
+                <figure>
+                    <h2>Content Ratings</h2>
+                    <select id="pie-chart-data" class="pie-data">
+                        <option value="apps">Number of Apps</option>
+                        <option value="installs">Number of Installs</option>
+                    </select>
+                    <!-- here's the div our chart will be injected into -->
+                    <div id="pc-chart" class="pie-chart-container chart" style="max-width: 1000px;"></div>
+                </figure>
+                <article>
+                    <h3>Which Content Ratings are popular/crowded?</h3>
+                    <p>We can clearly see that <b>Everyone</b> is by far the most popular and most crowded Content Rating group.</p>
+                </article>
+            </section>
+            <a href="#sec6" class="arrow bounce"></a>
+        </div>
+
+        <div id="sec6" class="container">
+            <section class="side">
+                <article>
+                    <h2>Conclusio</h2>
+                    <p>So if we want to develop our own app we learned that:</p>
+                    <ul>
+                        <li><b>Gaming</b> and <b>Communication</b> are the most downloaded Categories,</li>
+                        <li>there are far more <b>Free Apps</b> in the Google Play Store,</li>
+                        <li>the Content Rating <b>Everyone</b> is unsurprisingly the most popluar and most crowded one</li>
+                        <li>and if we manage to get a huge amount of reviews it is likely that the average rating is better (because we have a big user base).</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+
+        <div class="container" id="footer">
+            This Project was created by <a href="https://www.keinberger.at"><b>Ronald Keinberger</b></a> for the lecture Information Visualisation in the Web.
+        </div>
+
+        <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    </body>
+
+</html>
