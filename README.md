@@ -1,12 +1,13 @@
-# info-visu-google-playstore
+# Information Visualization of the Google Playstore Data
 This is a visualization of the google playstore [data](https://www.kaggle.com/lava18/google-play-store-apps).
 The final result can be seen [here](http://dataviz-keinberger.surge.sh/).
 
-## Technologie:
+### Technologie:
 - HTML
 - SASS
 - D3.js
 - webpack
+- Jupyter Notebook
 
 
 # Webpack for Webdevs
