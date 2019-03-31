@@ -4,15 +4,17 @@ This is a visualization of the google playstore [data](https://www.kaggle.com/la
 The final result can be seen [here](http://dataviz-keinberger.surge.sh/).
 
 ### Technologie
-- HTML
-- SASS
-- D3.js
-- webpack
-- Jupyter Notebook
+* HTML
+* SASS
+* D3.js
+* webpack
+* Jupyter Notebook
+* Panda and Numpy in Python
 
-
-# Webpack for Webdevs
-## A webpack 4 based setup
+### What i learned:
+* How to prepare the data (Jupyter Notebook)
+* How to visualize data
+* working with D3.js
 
 ### Installation
 * If you haven't already, install [npm](https://www.npmjs.com/).
